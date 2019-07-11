@@ -13,3 +13,4 @@ export class HelpComponent implements OnInit {
   }
 
 }
+
