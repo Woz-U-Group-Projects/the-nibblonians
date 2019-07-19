@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 export * from './footer.component';
- 
+
 
 @Component({
   selector: 'layout-footer',
