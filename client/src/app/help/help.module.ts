@@ -2,7 +2,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { HelpComponent } from './help.component';
-import { SharedModule } from '../shared'; 
+import { SharedModule } from '../shared';
 
 const helpRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -22,3 +22,5 @@ const helpRouting: ModuleWithProviders = RouterModule.forChild([
   providers: []
 })
 export class HelpModule {}
+
+
