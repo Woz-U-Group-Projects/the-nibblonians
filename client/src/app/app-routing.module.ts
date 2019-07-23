@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
-import { StartComponent } from 'src/start/start.component';
-import { ContinueComponent } from 'src/continue/continue.component';
-import { ReviewComponent } from 'src/review/review.component';
-import { ManagerComponent } from 'src/manager/manager.component';
-import { ContactComponent } from 'src/contact/contact.component';
-import { HelpComponent } from 'src/help/help.component';
+import { StartComponent } from '../start/start.component';
+import { ContinueComponent } from '../continue/continue.component';
+import { ReviewComponent } from '../review/review.component';
+import { ManagerComponent } from '../manager/manager.component';
+import { ContactComponent } from '../contact/contact.component';
+import { HelpComponent } from '../help/help.component';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 const routes: Routes = [
   {
