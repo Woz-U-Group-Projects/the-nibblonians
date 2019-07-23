@@ -3,27 +3,29 @@
 </div>
 
 <div class="page-header">
-    <div class="logo" 
-    [routerLink]="['home']"><img width="150" alt="Planet Express" src="../assets/logo.png" /></div>
+
+    <div class="logo" [routerLink]="['home']" ><img width="150" alt="Planet Express" src="../assets/logo.png" />
+    </div>
+
     <nav class="nav">
         <div class="nav__link dropdown-link">
-            
             <ul>
                 <li>Registration
                     <ul class="dropdown">
-                        <li><a class="btn" routerLink="start/start.component.html" routerLinkActive="active">Start Registration</a></li>
-                        <li><a class="btn" routerLink="../app/continue/" routerLinkActive="active">Continue Registration</a></li>
-                        <li><a class="btn" routerLink="../app/review/" routerLinkActive="active">Review Registration</a></li>
+                        <li><a class="btn" routerLink="start" routerLinkActive="active">Start Registration</a></li>
+                        <li><a class="btn" routerLink="continue" routerLinkActive="active">Continue Registration</a></li>
+                        <li><a class="btn" routerLink="review" routerLinkActive="active">Review Registration</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="nav__link">
-            <a class="btn" routerLink="manager" routerLinkActive="active">Manager Page</a>
-        </div>
-        <div class="nav__link">
             <a class="btn" routerLink="admin" routerLinkActive="active">Admin Page</a>
         </div>
+        <div class="nav__link">
+            <a class="btn" routerLink="manager" routerLinkActive="active">Manager Page</a>
+        </div>
+        
     </nav>
 </div>
 
@@ -31,15 +33,13 @@
 
 
 
-
-
-
-
-
  <div class="footer">
     <div class="footer-item footer-one">
         <p>57th Street, New New York </p>
-        <a href="../contact/contact.component.html">  Contact  </a> <a href="../app/help/help.component.html">Help</a>
+        <div class="nav__link">
+            <a class="btn" routerLink="contact" routerLinkActive="active">Contact Us</a>
+            <a class="btn" routerLink="help" routerLinkActive="active">Need Help?</a>
+        
     </div>
 </div>
 

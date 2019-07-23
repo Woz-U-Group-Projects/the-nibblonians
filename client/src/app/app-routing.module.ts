@@ -10,8 +10,13 @@ import { ContactComponent } from '../contact/contact.component';
 import { HelpComponent } from '../help/help.component';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { AdminComponent } from '../admin/admin.component'
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -39,6 +44,10 @@ const routes: Routes = [
   {
     path: 'help',
     component: HelpComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
 ];
 
