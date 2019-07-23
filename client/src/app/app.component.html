@@ -3,9 +3,11 @@
 </div>
 
 <div class="page-header">
-    <div class="logo"><img width="150" alt="Planet Express" src="../assets/logo.png" /></div>
+    <div class="logo" 
+    [routerLink]="['home']"><img width="150" alt="Planet Express" src="../assets/logo.png" /></div>
     <nav class="nav">
         <div class="nav__link dropdown-link">
+            
             <ul>
                 <li>Registration
                     <ul class="dropdown">
@@ -25,20 +27,24 @@
     </nav>
 </div>
 
+<router-outlet></router-outlet>
 
 
-<app-home> </app-home>
 
 
-<div class="footer">
+
+
+
+
+ <div class="footer">
     <div class="footer-item footer-one">
         <p>57th Street, New New York </p>
-        <a href="../app/contact/contact.component.html">  Contact  </a> <a href="../app/help/help.component.html">Help</a>
+        <a href="../contact/contact.component.html">  Contact  </a> <a href="../app/help/help.component.html">Help</a>
     </div>
 </div>
 
 
-<router-outlet></router-outlet>
+
 
 
 

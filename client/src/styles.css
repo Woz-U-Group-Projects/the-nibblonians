@@ -237,10 +237,12 @@ table {
     background-color: #F60100;
     color: #fff;
     padding: 10px 10px;
+    flex-direction: row-reverse;
 }
 .footer-item {
     flex: 1;
     background: #F60100;
+    text-align: center;
 }
 
 .home-banner {
