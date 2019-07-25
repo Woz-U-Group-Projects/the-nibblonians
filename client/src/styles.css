@@ -110,10 +110,13 @@ section {
     display: block;
 }
 
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> d1f02cbc7e7499df316d55d71b1fac3922194155
 body {
     line-height: 1;
     background-image: 'crashedship.png';
@@ -196,7 +199,10 @@ table {
 }
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> d1f02cbc7e7499df316d55d71b1fac3922194155
 .page-content .container {
     display: flex;
     flex-direction: row;
@@ -266,8 +272,11 @@ table {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> d1f02cbc7e7499df316d55d71b1fac3922194155
 .photo-id {
     width: 100%;
     background-color: #fff;
@@ -334,6 +343,10 @@ li {
     transition-duration: 0.5s;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d1f02cbc7e7499df316d55d71b1fac3922194155
 li:hover {
     cursor: pointer;
 }
