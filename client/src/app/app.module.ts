@@ -10,14 +10,12 @@ import { ReviewComponent } from './review/review.component';
 import { ManagerComponent } from './manager/manager.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
-import { HelpComponent } from '../help/help.component';
+import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent,
-    FooterComponent,
+
 
   ],
   imports: [
