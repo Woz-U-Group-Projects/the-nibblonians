@@ -8,11 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { HelpComponent } from './help/help.component';
 import { HelpModule } from './help/help.module';
-import {
-  FooterComponent,
-  HeaderComponent,
-  SharedModule
-} from './shared';
 import { ContactComponent } from './contact/contact.component';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
@@ -21,8 +16,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
     ContactComponent,
     // HelpComponent
 
@@ -32,7 +25,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     AppRoutingModule,
     HelpModule,
     rootRouting,
-    SharedModule,
     FormsModule
   ],
   providers: [],
