@@ -3,7 +3,14 @@
     background-color: #ffffff;
 }
 .hero-body{
-    background-color: rgb(255, 255, 255);
+        line-height: 1;
+        background-image: 'crashedship.png';
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-attachment: fixed;
+        background-color: aquamarine;
+        font-size: 1em;
+        font-family:Arial, Helvetica, sans-serif;
 }
 .nav-link {
     cursor:pointer;
@@ -35,9 +42,9 @@ p{
     }
 }
   
-.call-out:nth-child(1) {background-color: #ffffff;}
-.call-out:nth-child(2) {background-color: #ffffff;}
-.call-out:nth-child(3) {background-color: #ffffff;}
+.call-out:nth-child(1) {background-color: aquamarine;}
+.call-out:nth-child(2) {background-color: aquamarine;}
+.call-out:nth-child(3) {background-color: aquamarine;}
 
 
 .banner {
@@ -51,7 +58,7 @@ p{
 }
   
 .center-me {
-    color: #FFF;
+    color: white;
     font-size: 50px;
     margin: auto;
 }

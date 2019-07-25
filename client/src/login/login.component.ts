@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
-import { UserService } from '../user.service';
+import { User } from '../app/user';
+import { UserService } from '../app/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
       () => {
         this.userService.getProfile().subscribe(() => {
           // set the user to logged in
-          this.userService.loggedIn = true;
+          // this.userService.loggedIn = true;
           // send to the profile page
           this.router.navigate(['/profile']);
         });

@@ -13,10 +13,17 @@ export class UserService {
   options = { withCredentials: true };
 
   // base url of the express back end
+<<<<<<< HEAD
   url = 'http://localhost:3000/users/';
 
   // boolean value to hold the login status
   loggedIn = false;
+=======
+  url: 'http://localhost:3000/users/';
+
+  // boolean value to hold the login status
+  loggedIn: false;
+>>>>>>> d1f02cbc7e7499df316d55d71b1fac3922194155
 
   // register a user, must .subscribe() to trigger
   // POST baserl/signup
