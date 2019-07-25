@@ -1,3 +1,7 @@
+body {
+  background-image: 'crashedship.png';
+  background-color: aquamarine;
+}
 .nav-link {
     cursor:pointer;
 }

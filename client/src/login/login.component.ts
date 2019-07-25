@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
       () => {
         this.userService.getProfile().subscribe(() => {
           // set the user to logged in
-          this.userService.loggedIn = true;
+          // this.userService.loggedIn = true;
           // send to the profile page
           this.router.navigate(['/profile']);
         });

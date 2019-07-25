@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.userService.validateToken().subscribe(response => {
       console.log(response);
-      this.userService.loggedIn = response;
+      // this.userService.loggedIn = response;
     });
   }
 }
