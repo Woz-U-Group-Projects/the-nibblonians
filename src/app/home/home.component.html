@@ -1,0 +1,76 @@
+<div class="page-content">
+        <div class="container">
+    
+            <div class="col-1">
+    
+                
+                <div class="home-banner">
+                    <h1>Welcome to the Home Page.<br> Please watch the following video on how to successfully use this application.
+                    </h1>
+                </div>
+    
+             <div class="col-1-one">
+                  
+                            <div class="video-container">
+                                <video autoplay muted loop>
+                                    <source src="\assets\videoplayback.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                                           
+                         
+
+                <h1>Log-in To Continue </h1>
+                <br />
+
+                <form #login = "ngForm" (ngSubmit) = "onClickSubmit(login.value)" >
+                    <input type = "text" name = "email" placeholder = "Email" ngModel>
+                    <br />
+                    <input type = "password" name = "pwd" placeholder = "Password" ngModel>
+                    <br />
+                    <input type = "submit" value = "submit">
+                  </form>
+
+             </div>   
+            
+            
+            </div>
+            <div class="col-2">
+                <div class="photo-id">
+                    Photo ID Badge Rendering Template for Employee Name Start Date
+                </div>
+                <div class="uploadphoto">
+                    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="fileupload">
+                        <label for="fileupload"> </label>
+                        <input type="image" name="upload" src="../assets/upload.png" alt="Submit" width="35"> </form>
+    
+                </div>
+                <div class="map-container">
+                    <div class="slide">
+                                          
+                        <div class="content">Floor 1
+                                <a href="../assets/Floor - 1.JPG" class="livethumbnail"> <img src="../assets/Floor - 4.JPG"
+                                    width=100% largewidth="480" largeheight="360" /></a>
+                            </div> 
+                        <div class="content">Floor 2
+                                <a href="../assets/Floor - 2.JPG" class="livethumbnail"> <img src="../assets/Floor - 4.JPG"
+                                    width=100% largewidth="480" largeheight="360" /></a>
+                            </div> 
+                        <div class="content">Floor 3
+                                <a href="../assets/Floor - 3.JPG" class="livethumbnail"> <img src="../assets/Floor - 4.JPG"
+                                    width=100% largewidth="480" largeheight="360" /></a>
+                            </div> 
+                        <div class="content">Floor 4
+                            <a href="../assets/Floor - 4.JPG" class="livethumbnail"> <img src="../assets/Floor - 4.JPG"
+                                width=100% largewidth="480" largeheight="360" /></a>
+                        </div>
+                        
+                    </div>
+                
+             
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    

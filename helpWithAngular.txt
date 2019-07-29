@@ -1,0 +1,21 @@
+after downloading the files, opening in VSC, terminal run:
+1) npm start
+2) npm audit fix
+3) npm install -g @angular/cli
+4) ng serve --open
+5) [to exit] control c
+
+if you run into issues:
+1) check for missing commas or colons
+2) check for mispelled words, it is common to place a lower case where upper case should be
+3) reverse the most recent change made from when you started
+4) if the error appears that the app won't render due to global angular being higher than your local angular after you've just made the update some hours or minutes ago, it is not a problem with angular, it does not like the code you recently input or changed
+5) if ng serve --open is giving you an issue, try ng serve, if that fails and you end up with error message Cannot GET, it does not like your recent code update
+6) angular is a pretty simple render, albeit maybe not where you would like it, the render is standard if the code is placed correctly
+7) if you feel your code is not wrong, it may be in the wrong file, or your file or folder may be under an incorrect structure
+8) Google it
+9) look back in your old Woz U curriculum
+10) review your code one more time
+11) if you still have an issue after all of this, i will try to help you if my schedule allows, and yes i will ask you if you followed this 'help' manual
+
+happy coding!
