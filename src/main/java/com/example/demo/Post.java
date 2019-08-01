@@ -27,7 +27,6 @@ public class Post {
 	}
 	
 	public void setauthorId(String id) {
-	this.authorid = authorid;
 }
 	public String getauthorId() {
 		return this.authorid;

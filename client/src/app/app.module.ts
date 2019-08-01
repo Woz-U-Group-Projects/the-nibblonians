@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormComponent } from './form/form.component';
 // import {
 //   MatInputModule,
 //   MatPaginatorModule,
@@ -53,6 +54,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    FormComponent,
     // FileSelectDirective,
  
 

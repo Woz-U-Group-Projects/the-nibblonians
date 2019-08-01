@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../app/user';
-// import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
  
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class UserService {
  
   private usersUrl: string;
@@ -16,7 +15,7 @@ export class UserService {
   //   return this.http.get<User[]>(this.usersUrl);
   // }
  
-  public save(user: User) {
-    return this.http.post<User>(this.usersUrl, user);
+ getAll(): Observable<any>{
+    return this.http.get(this.usersUrl);
   }
 }
