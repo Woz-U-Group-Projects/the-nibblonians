@@ -2,7 +2,6 @@ package com.futurama.hiredhyperspace;
 
 import com.futurama.hiredhyperspace.Employees;
 import com.futurama.hiredhyperspace.repositories.EmployeeRepository;
-
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +16,7 @@ import java.util.List;
 @RequestMapping("/hiredhyperspace")
 public class HiredHyperspaceController {
 	@Autowired
-	private EmployeeRepository repository;
+	private EmployeeRepository<Employees> repository;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public List<Employees> getAllEmployees() {
@@ -27,7 +26,7 @@ public class HiredHyperspaceController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 
 	public Employees getEmployeesById(@PathVariable("id") ObjectId id) {
-		return (Employees) repository.findById(id).orElse(null);
+		return (Employees) repository.findBy_id(id).orElse(null);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
