@@ -1,9 +1,8 @@
-package com.example.gtommee.rest_tutorial.repositories;
+package com.futurama.hiredhyperspace.repositories;
 
-import com.example.gtommee.rest_tutorial.models.Employees;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface EmployeesRepository extends MongoRepository<Employees, String> {
+public interface EmployeeRepository<Employees> extends MongoRepository<Employees, String> {
   Employees findBy_id(ObjectId _id);
 }

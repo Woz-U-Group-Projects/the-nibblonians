@@ -1,21 +1,8 @@
-package com.futurama.hiredhyperspace;
-
-import org.bson.types.ObjectId;
+package com.futurama.hiredhyperspace.repositories;
 import org.springframework.data.annotation.Id;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.bson.types.ObjectId;
 
-/*connects java to spring to pull data through IDE*/
-@SpringBootApplication
-public class Employees {
-
-	public static void main(String[] args) {
-		SpringApplication.run(Employees.class, args);
-	}
-
-}
-
-public class QuickReport1 {
+public class QuickReport {
   @Id
   public ObjectId _id;
   public String firstName;
@@ -23,14 +10,15 @@ public class QuickReport1 {
   public String role;
   public Number floor;
   public Number desk;
+private ObjectId id;
 
   // Constructors
-  public Management() {}
+  public void Management() {}
  
-  public Management(ObjectId _id, String firstName, String lastName, String role, Number floor, Number desk) {
+  public QuickReport(ObjectId _id, String firstName, String lastName, String role, Number floor, Number desk) {
  
     this._id = id;
-    this.firstName = firstName
+    this.firstName = firstName;
     this.lastName = lastName;
     this.role = role;
     this.floor = floor;
@@ -45,15 +33,15 @@ public class QuickReport1 {
   public void setFirstName(String firstName) { this.firstName = firstName; }
  
   public String getLastName() { return lastName; }
-  public void setLastName(String lastName) { this.lastName = lastName }
+  public void setLastName(String lastName) { this.lastName = lastName; }
 
   public String getSpecies() { return role; }
   public void setSpecies(String role) { this.role = role; }
  
-  public String getfloor() { return floor; }
-  public void setfloor(String floor) { this.floor = floor; }
+  public Number getfloor() { return floor; }
+  public void setfloor(Number floor) { this.floor = floor; }
 
-  public String getdesk() { return desk; }
+  public Number getdesk() { return desk; }
   public void setdesk(Number desk) { this.desk = desk; }
 
 }

@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/*
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -32,7 +33,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule } from '@angular/material';
-
+*/
 
 @NgModule({
   declarations: [
@@ -63,15 +64,15 @@ import {
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatProgressSpinnerModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule
+    // MatInputModule,
+    // MatTableModule,
+    // MatPaginatorModule,
+    // MatSortModule,
+    // MatProgressSpinnerModule,
+    // MatIconModule,
+    // MatButtonModule,
+    // MatCardModule,
+    // MatFormFieldModule
   ],
   providers: [
     {

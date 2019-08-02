@@ -5,10 +5,29 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "./src/angular.json",
+    "./src/package-lock.json",
+    "./src/package.json",
+    "./src/tsconfig.json",
+    "./src/tslint.json",
+    "./src/app/app.component.ts",
+    "./src/app/app.module.ts",
+    "./src/app/admin/component.ts",
+    "./src/app/auth/login/login.component.ts",
+    "./src/app/auth/register/register.component.ts",
+    "./src/app/contact/contact.component.ts",
+    "./src/app/continue/continue.component.ts",
+    "./src/app/footer/footer.component.ts",
+    "./src/app/header/header.component.ts",
+    "./src/app/help/help.component.ts",
+    "./src/app/home/home.component.ts",
+    "./src/app/interceptors/token.interceptor.ts",
+    "./src/app/manager/manager.component.ts",
+    "./src/app/profile/profile.component.ts",
+    "./src/app/review/review/component.ts",
+    "./src/app/start/start.component.ts"
   ],
   "exclude": [
-    "src/test.ts",
-    "src/**/*.spec.ts"
+  "./src/tsconfig.spec.json",
   ]
 }
