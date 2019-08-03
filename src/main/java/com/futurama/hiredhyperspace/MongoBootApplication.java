@@ -36,7 +36,6 @@ public class MongoBootApplication implements CommandLineRunner {
 	}
 
 	public void addSampleData() {
-		System.out.println("Adding sample data");
 		repository.save(new Employees("Helena", "Bonham", "Carter", "Bon Cart", 53, 5 / 26 / 1966, "Female", "Married",
 				808 - 554 - 3789, "54 Diagon Alley Lane", "Brooklyn", "NY", 11215, "Asthma", "null", 8 / 3 / 2019));
 		repository.save(new Employees("Steven", "Vincent", "Buscemi", "Steve Buscemi", 61, 12 / 13 / 1957, "Male",
@@ -45,6 +44,7 @@ public class MongoBootApplication implements CommandLineRunner {
 		repository.save(new Employees("Ellen", "Grace", "Page", "Ellen Page", 32, 2 / 21 / 1987, "Female", "Married",
 				813 - 216 - 7431, "2081 Laughing Man Loop", "Flushing", "NY", 11367, "None", "Air Force",
 				8 / 7 / 2019));
+		System.out.println("Adding sample data");
 	}
 
 	public void listAll() {
