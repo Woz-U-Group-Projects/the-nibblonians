@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import com.mongodb.client.result.UpdateResult;
 
 @Component
-public class CustomRepositoryImpl implements CrudRepository {
+public class CustomRepositoryImpl {
 
 	@Autowired
 	MongoTemplate mongoTemplate;
@@ -24,7 +24,7 @@ public class CustomRepositoryImpl implements CrudRepository {
 
 		// potential need to update Number to String
 		// ^ causes need to update age & other Number to parseInt
-		Query query = new Query(Criteria.where("reportsTo").is(reportsTo));
+		Query query = new query();
 		Update update = new Update();
 		update.set("firstName", firstName);
 		update.set("middleName", middleName);
@@ -50,75 +50,59 @@ public class CustomRepositoryImpl implements CrudRepository {
 			return 0;
 	}
 
-	private void query(Criteria criteria) {
+	private void query(Criteria criteria) {}
 		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
 	public Object save(Object entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Iterable saveAll(Iterable entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Optional findById(Object id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public boolean existsById(Object id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public Iterable findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Iterable findAllById(Iterable ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public long count() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public void deleteById(Object id) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
-	@Override
 	public void delete(Object entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void deleteAll(Iterable entities) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
-
 }

@@ -28,6 +28,8 @@
     "./src/app/start/start.component.ts"
   ],
   "exclude": [
-  "./src/tsconfig.spec.json",
+    "./src/tsconfig.spec.json",
+    "test.ts",
+    "**/*.spec.ts"
   ]
 }
