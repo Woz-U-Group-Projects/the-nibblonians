@@ -1,0 +1,7 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+#dataTable {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
