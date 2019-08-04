@@ -1,36 +1,49 @@
-import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { HelpComponent } from './help/help.component';
-import { HelpModule } from './help/help.module'
-import {
-  FooterComponent,
-  HeaderComponent,
-  SharedModule
-} from './shared';
-
-const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
-
+import { StartComponent } from './start/start.component';
+import { ContinueComponent } from './continue/continue.component';
+import { ReviewComponent } from './review/review.component';
+import { ManagerComponent } from './manager/manager.component';
+import { AdminComponent } from './admin/admin.component';
+import { ContactComponent } from './contact/contact.component';
+import { HelpComponent } from './help/help.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ChartsModule } from 'ng2-charts';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    // HelpComponent
+    StartComponent,
+    ContinueComponent,
+    ReviewComponent,
+    ManagerComponent,
+    AdminComponent,
+    ContactComponent,
+    HelpComponent,
+    HomeComponent,
+    ProfileComponent,
+    LoginComponent,
+    RegisterComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HelpModule,
-    rootRouting,
-    SharedModule
-  ],  
+    HttpClientModule,
+    FormsModule,
+    ChartsModule, 
+    DataTablesModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

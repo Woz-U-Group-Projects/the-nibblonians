@@ -1,0 +1,51 @@
+<div class="page-content">
+    <div class="container">
+
+
+        <div class="col-1">
+
+            <div class="banner">
+                <h1>Welcome Managers!
+                    <br> Please see items below.
+                </h1>
+
+                <div class="reports">
+                    <h1>Reports List</h1>
+                    <div class="completed-registration"></div>
+                    <div class="pending-registration"></div>
+                    <div class="HR-pending"></div>
+
+                    <div class="report-form">
+                        <form #report="ngForm" (ngSubmit)="onClickSubmit(login.value)">
+                            <input type="text" name="firstname" placeholder="First Name" ngModel>
+                            <br />
+                            <input type="text" name="lastname" placeholder="Last Name" ngModel>
+                            <br />
+                            <input type="text" name="employeeid" placeholder="Employee ID" ngModel>
+                            <br />
+                            <input type="text" name="hire-date" placeholder="Hire Date" ngModel>
+                            <br />
+                            <input type="text" name="email" placeholder="Email" ngModel>
+                            <br />
+                            <input type="text" name="phone" placeholder="Phone" ngModel>
+                            <br />
+                            <input type="text" name="floor" placeholder="Desk/Floor Location" ngModel>
+                            <br />
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="message-board">
+                Message Board
+            </div>
+            <div class="quick-report-preview">Quick Reports Preview
+            </div>
+
+        </div>
+
+        <router-outlet></router-outlet>
