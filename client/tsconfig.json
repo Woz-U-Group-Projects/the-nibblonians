@@ -11,6 +11,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -19,8 +22,12 @@
       "dom"
     ]
   }
-}
-
+},
+// {"files": [
+//   "main.ts",
+//   "polyfill.ts"
+// ]
+// }
 // {
 //   "compileOnSave": false,
 //   "compilerOptions": {
