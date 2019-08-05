@@ -15,49 +15,65 @@
 </head>
 
 <body>
-   <h1>Hired HyperSpace</h1>
+<center><p>Hired HyperSpace</p></center> 
 
 <div class="jumbotron">
     <div class="form">
     <p><b>New User?</b></p>
-        <Label for="x" >Create Username:</Label>
+       
+  <form>
+  <div class="new-user">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" required [(ngModel)]="user.firstname" name="firstname">
+        <br>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" required [(ngModel)]="user.lastname" name="lastname">
+        <br>
+        <label for="email">Email Address</label>
+        <input type="text"  id="email" required [(ngModel)]="user.email" name="email">
+        <br>
+        <label for="username">Username</label>
+        <input type="text"  id="username" required [(ngModel)]="user.username" name="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="text"  id="password" required [(ngModel)]="user.password" name="password">
+        <br>
+           <button class="btn btn-primary">Create User</button>
+           <br>
+  </form>
+<br>
+ <div class="existing-user">
+    <p><b>Existing User? </b></p>
+        <Label for="x" >Username:</Label>
         <input type="text" id="x" value="">
         <br>
-        <label for="y" >Create Password</label>
+        <label for="y" >Password:</label>
         <input type="text" id="y" value="">
         <br>
-        <button class="btn btn-primary">Create</button>
-        <hr>
-        <h3>
-            <span id="result"></span>
-        </h3>
-    </div>
-     <div class="form">
-    <p><b>Existing User?</b></p>
-        <Label for="x" >Enter Username:</Label>
-        <input type="text" id="x" value="">
-        <br>
-        <label for="y" >Enter Password:</label>
-        <input type="text" id="y" value="">
-        <br>
-        <button class="btn btn-primary" >Login</button>
+        <button class="btn btn-primary">Login</button>
         <hr>
         <h3>
              <span id="result"></span>
-        </h3>
-        
+        </h3> 
+    </form>
+  </div>  
         
         <div class="form">
     <p><b></b></p>
        <span id="prevmessage"></span>
         </h3>
-        <a href="post.html">Posts</a>
+        <a href="post.html">Messages</a>
         
     </div>
     </div>
-    <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+
+
+    <!-- <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="index.js"></script>
 </body>
+
 
 </html>

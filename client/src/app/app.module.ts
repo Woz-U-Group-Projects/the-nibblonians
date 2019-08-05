@@ -19,6 +19,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserService } from './user.service'; 
+// import { AuthService } from './auth.service';
 
 
 import { TokenInterceptor } from './interceptors/token.interceptor';
@@ -55,6 +57,7 @@ import { FormComponent } from './form/form.component';
     LoginComponent,
     RegisterComponent,
     FormComponent,
+    
     // FileSelectDirective,
  
 
@@ -82,8 +85,12 @@ import { FormComponent } from './form/form.component';
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+    },
+    UserService,
+    // AuthService,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

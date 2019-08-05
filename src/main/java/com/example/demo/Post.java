@@ -16,7 +16,7 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private Timestamp last_update;
-	private String post;
+	public String post;
 	private String authorid;
 	
 	public void setId(Integer id) {

@@ -3,6 +3,8 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { User } from '../../user';
+import { UserService } from '../../user.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -19,31 +21,32 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class RegisterComponent implements OnInit {
 
-  registerForm: FormGroup;
-  fullName = '';
-  email = '';
-  password = '';
-  isLoadingResults = false;
-  matcher = new MyErrorStateMatcher();
-
-  constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthService) { }
-
+ 
+  user: User = new User();
+  submitted = false;
+ 
+  constructor(private userService: UserService) { }
+ 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      'fullName' : [null, Validators.required],
-      'email' : [null, Validators.required],
-      'password' : [null, Validators.required]
-    });
   }
-
-  onFormSubmit(form: NgForm) {
-    this.authService.register(form)
-      .subscribe(res => {
-        this.router.navigate(['login']);
-      }, (err) => {
-        console.log(err);
-        alert(err.error);
-      });
+ 
+  newCustomer(): void {
+    this.submitted = false;
+    this.user = new User();
   }
-
+ 
+  save() {
+    this.userService.createUser(this.user)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.submitted = true;
+        },
+        error => console.log(error));
+    this.user = new User();
+  }
+ 
+  onSubmit() {
+    this.save();
+  }
 }

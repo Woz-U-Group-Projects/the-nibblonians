@@ -10,8 +10,6 @@ user: Array<any>;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getAll().subscribe(data => {
-      this.user = data;
-    });
-  }
-}
+    this.userService.getAll()
+      this.user = this.user;
+  }}

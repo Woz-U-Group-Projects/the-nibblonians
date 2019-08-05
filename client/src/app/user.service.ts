@@ -1,21 +1,48 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user'
 import { Observable } from 'rxjs';
  
 @Injectable({providedIn: 'root'})
 export class UserService {
+    delete(id: number) {
+        throw new Error("Method not implemented.");
+    }
+    getAll() {
+        throw new Error("Method not implemented.");
+    }
  
-  private usersUrl: string;
+  private usersurl: string;
  
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8080/users';
+    this.usersurl = 'http://localhost:8080/api/users';
   }
  
-  // public findAll(): Observable<User[]> {
-  //   return this.http.get<User[]>(this.usersUrl);
-  // }
+  getUser(id: number): Observable<any> {
+    return this.http.get(`${this.usersurl}/${id}`);
+  }
  
- getAll(): Observable<any>{
-    return this.http.get(this.usersUrl);
+  createUser(User: any): Observable<any> {
+    return this.http.post(this.usersurl, User);
+  }
+ 
+  updateUser(id: number, value: any): Observable<any> {
+    return this.http.put(`${this.usersurl}/${id}`, value);
+  }
+ 
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.usersurl}/${id}`);
+  }
+ 
+  getUsersList(): Observable<any> {
+    return this.http.get(this.usersurl);
+  }
+ 
+  getUsersByAge(age: number): Observable<any> {
+    return this.http.get(`${this.usersurl}/age/${age}`);
+  }
+ 
+  deleteAll(): Observable<any> {
+    return this.http.delete(this.usersurl);
   }
 }

@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.demo.PostRepository;
 
+
+@CrossOrigin(origins = "http://localhost:8080")
 @Controller
 @RestController
 @RequestMapping("/post")
@@ -30,8 +33,7 @@ public class PostController {
 	@Autowired 
 	PostRepository postRepository;
 	PostRepository dao;
-	
-	@CrossOrigin(origins = "http://localhost:3000")
+
 	
 	@GetMapping("/")
 	public String[] getValues(){
@@ -42,14 +44,14 @@ public class PostController {
 	return postRepository.findAll();
 	}
 	
-	@RequestMapping
-	private  String getLocalDateTime() {
-        String result = "";
-        LocalDateTime now = LocalDateTime.now();
-        result = now.toString();
-        System.out.println(result);
-        return result;
-}
+// 	@RequestMapping
+// 	private  String getLocalDateTime() {
+//         String result = "";
+//         LocalDateTime now = LocalDateTime.now();
+//         result = now.toString();
+//         System.out.println(result);
+//         return result;
+// }
 	@RequestMapping("/")
 	    public String index() {
 	        return "index.html";
@@ -61,30 +63,28 @@ public class PostController {
 	 
 	    public String indexjs() {
 	        return "index.js";
-	    }
+	    }}
 	    
-	    
-	    
-	    @PostMapping("/post")
-	    public ResponseEntity<Post> postMessage(@RequestBody Post message) {
+// 	    @PostMapping("/post")
+// 	    public ResponseEntity<Post> postMessage(@RequestBody Post message) {
 
-	// saving to DB using instance of the repo interface
-	        Post createdPost = dao.save(message);
+// 	// saving to DB using instance of the repo interface
+// 	        Post createdPost = dao.save(message);
 
-	// RespEntity crafts response to include correct status codes.
-	        return ResponseEntity.ok(createdPost);
-	    }
+// 	// RespEntity crafts response to include correct status codes.
+// 	        return ResponseEntity.ok(createdPost);
+// 	    }
 
-	@DeleteMapping("/post/{id}")	
-	    public ResponseEntity<Post> deletePosts(@PathVariable(value="id") Integer id) {
-	        Post foundPosts = dao.findById(id).orElse(null);
-	if(foundPosts == null) {
-	            return ResponseEntity.notFound().header("Message","Nothing found with that id").build();
-	        }else {
-	            dao.delete(foundPosts);
-	        }
-	        return ResponseEntity.ok().build();
-	    }
+// 	@DeleteMapping("/post/{id}")	
+// 	    public ResponseEntity<Post> deletePosts(@PathVariable(value="id") Integer id) {
+// 	        Post foundPosts = dao.findById(id).orElse(null);
+// 	if(foundPosts == null) {
+// 	            return ResponseEntity.notFound().header("Message","Nothing found with that id").build();
+// 	        }else {
+// 	            dao.delete(foundPosts);
+// 	        }
+// 	        return ResponseEntity.ok().build();
+// 	    }
 
-}
+// }
 

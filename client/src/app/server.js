@@ -1,14 +1,3 @@
-var axios = require('axios');
-
-module.exports = {
-    fetchValues: function() {
-        var encodedURI = window.encodeURI('http://localhost:4200');
-        return axios.get(encodedURI).then(response => {
-            console.log('fetchValues: ', response.data);
-            return response.data;
-        });
-        
-    }};
 var express = require('express');  
 var path = require("path");   
 var bodyParser = require('body-parser');  
@@ -44,7 +33,7 @@ var UsersSchema = new Schema({
   
 var model = mongo.model('users', UsersSchema, 'users');  
   
-app.post("/SaveUser",function(req,res){   
+app.post("/api/SaveUser",function(req,res){   
  var mod = new model(req.body);  
  if(req.body.mode =="Save")  
  {  
@@ -73,7 +62,7 @@ else
 }  
  })  
   
- app.post("/deleteUser",function(req,res){      
+ app.post("/api/deleteUser",function(req,res){      
     model.remove({ _id: req.body.id }, function(err) {    
      if(err){    
          res.send(err);    
@@ -86,7 +75,7 @@ else
   
   
   
- app.get("/getUser",function(req,res){  
+ app.get("/api/getUser",function(req,res){  
     model.find({},function(err,data){  
               if(err){  
                   res.send(err);  
@@ -102,4 +91,3 @@ app.listen(8080, function () {
     
  console.log('Example app listening on port 8080!')  
 })  
-    

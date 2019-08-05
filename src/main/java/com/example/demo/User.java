@@ -8,16 +8,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// import org.springframework.data.annotation.Id;
+// import org.springframework.data.mongodb.core.mapping.Document;
+// import org.springframework.data.mongodb.repository.*;
+
+
+
 @Entity
 @Table(name="user")
 public class User {
 	// id int
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-    private String first_name;
-    private String last_name;
+    private String firstname;
+    private String lastname;
     private String username;
     private String password;
 
@@ -25,20 +31,22 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public Integer getId() {
+
 		return this.id;
 	}
-	public String getFirst_name() {
-    	return first_name;
+	public String getFirstname() {
+    	return firstname;
     }
-    public void setFirst_name(String first_name) {
-    	this.first_name = first_name;
+    public void setFirstname(String firstname) {
+    	this.firstname = firstname;
     }
-    public String getLast_name() {
-    	return last_name;
+    public String getLastname() {
+    	return lastname;
     }
-    public void setLast_name(String last_name) {
-    	this.last_name = last_name;
+    public void setLastname(String lastname) {
+    	this.lastname = lastname;
     }
     public String getUsername() {
     	return username;
@@ -52,13 +60,7 @@ public class User {
     public void setPassword(String password) {
     	this.password = password;
     }
- 
 
-	
-	//ID: int
-	//firstName: String
-	//lastName: String
-	//username: String
-	//password: String
+    
 
 }
