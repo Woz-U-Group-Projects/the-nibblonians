@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.support.Repositories;
+
 import com.futurama.hiredhyperspace.repositories.EmployeeRepository;
 
 
@@ -12,10 +14,10 @@ import com.futurama.hiredhyperspace.repositories.EmployeeRepository;
 public class MongoBootApplication implements CommandLineRunner {
 
 	@Autowired
-	EmployeeRepository repository;
+	EmployeeRepository<Repositories> repository;
 
 	@Autowired
-	MongoRepository crepo;
+	MongoRepository<?, ?> hiredhyperspace;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MongoBootApplication.class, args);

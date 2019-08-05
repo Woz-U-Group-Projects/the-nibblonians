@@ -1,6 +1,7 @@
 package com.futurama.hiredhyperspace.repositories;
 
 import org.bson.types.ObjectId;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
@@ -20,5 +21,7 @@ public interface EmployeeRepository<Employees> extends MongoRepository<Employees
 	Iterable findCustomByRegExRole(String string);
 
 	com.futurama.hiredhyperspace.Employees findByReportsTo(String string);
+
+	void save(com.futurama.hiredhyperspace.Employees employees);
 
 }

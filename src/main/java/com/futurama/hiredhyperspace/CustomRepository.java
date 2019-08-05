@@ -4,16 +4,15 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+//import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import com.mongodb.client.result.UpdateResult;
 
 @Component
-public class CustomRepositoryImpl {
+public class CustomRepository {
 
 	@Autowired
 	MongoTemplate mongoTemplate;
@@ -50,19 +49,21 @@ public class CustomRepositoryImpl {
 			return 0;
 	}
 
-	private void query(Criteria criteria) {}
-		// TODO Auto-generated method stub
+//	private void query(Criteria criteria) {}
+//		// TODO Auto-generated method stub
 
 	public Object save(Object entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public Iterable saveAll(Iterable entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public Optional findById(Object id) {
 		// TODO Auto-generated method stub
 		return null;

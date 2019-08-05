@@ -153,3 +153,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/.metadata/
